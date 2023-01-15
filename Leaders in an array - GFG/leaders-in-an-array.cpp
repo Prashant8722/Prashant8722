@@ -10,13 +10,13 @@ using namespace std;
 
 class Solution{
     //Function to find the leaders in the array.
-    void rev(vector<int>&vec , int low , int high)
-    {
-     while(low < high)
-     {
-         swap(vec[low++],vec[high--]);
-     }
-    }
+    // void rev(vector<int>&vec , int low , int high)
+    // {
+    //  while(low < high)
+    //  {
+    //      swap(vec[low++],vec[high--]);
+    //  }
+    // }
     public:
     vector<int> leaders(int a[], int n){
        vector<int> v;
@@ -31,7 +31,8 @@ class Solution{
                 tempLeader = a[i];
             }
        }
-       rev(v, 0, v.size()-1);
+    //   rev(v, 0, v.size()-1);
+    reverse(v.begin(),v.end());
        return v;
         
     }
