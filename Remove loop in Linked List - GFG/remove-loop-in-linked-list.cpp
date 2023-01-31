@@ -76,8 +76,7 @@ struct Node
 class Solution
 {
     public:
-    //Function to remove a loop in the linked list.
-     Node* commonPoint(Node* head)
+    Node* commonPoint(Node* head)
      {
          Node *slow = head;
          Node *prev = NULL;
@@ -106,18 +105,15 @@ class Solution
              slow = slow->next;
              prev = fast;
              fast =fast->next;
-            // cout<<prev->data<<endl;
          }
          return prev;
      }
+    //Function to remove a loop in the linked list.
     void removeLoop(Node* head)
     {
-        // code here
-        // just remove the loop without losing any nodes
         Node* nextdel = commonPoint(head);
         if(nextdel != NULL)
             {
-               // cout<<nextdel->data;
                 nextdel->next  = NULL;
             }
     }
