@@ -93,14 +93,13 @@ Node* sortedMerge(Node* n, Node* m)
         if(m->data < n->data ){
             temp = m;
             m = m->next;
-            temp->next = NULL;
+            
         }
         else{
             temp = n;
             n = n->next;
-            temp->next = NULL; 
         }
-        
+        temp->next = NULL;
         if(!res){
             res = temp;
             track = res;
