@@ -14,14 +14,14 @@ public:
             {
                 v.push_back(mat[0][0]);
             }
-            else if(n == 2)
-            {
-                for(int i = 0;i<n ;i++)
-                {
-                    for(int j= 0 ; j<n ;j++)
-                        v.push_back(mat[i][j]);
-                }
-            }
+            // else if(n == 2)
+            // {
+            //     for(int i = 0;i<n ;i++)
+            //     {
+            //         for(int j= 0 ; j<n ;j++)
+            //             v.push_back(mat[i][j]);
+            //     }
+            // }
             else {
                 for(int j = 0 ; j < n ;j++)
                 {   
