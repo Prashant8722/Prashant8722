@@ -13,17 +13,20 @@ class Solution{
 	   vector<int> res;
 	   bool flag = false;
 	    while(n % 2 == 0){
-	       flag = true;
+	       if(!flag){ 
+	           res.push_back(2);
+	           flag = true;
+	       }
 	       n=n/2;
 	    }
-	    if(flag) res.push_back(2);
 	    flag = false;
-	    
 	    while(n % 3 == 0){
-	       flag = true;
+	    if(!flag){ 
+	        res.push_back(3);
+	        flag = true;   
+	        }
 	       n=n/3;
 	    }
-	    if(flag) res.push_back(3);
 	    flag = false;
 	    for ( int i = 5 ; i* i <= n ; i+=6)
 	    {
