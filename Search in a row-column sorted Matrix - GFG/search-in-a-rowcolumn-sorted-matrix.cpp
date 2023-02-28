@@ -11,15 +11,15 @@ class Solution
     //Function to search a given number in row-column sorted matrix.
     bool search(vector<vector<int> > mat, int n, int m, int x) 
     {
-        int i = 0; int j = m-1;
-        while(i<n && j>=0 )
+        int i = n-1; int j = 0;
+        while(i>=0 && j<m )
         {
             if(x == mat[i][j])
                 return 1;
             else if (x < mat[i][j])
-                j--;
+                i--;
             else
-                i++;
+                j++;
         }
         return 0;
     }
